@@ -97,8 +97,8 @@ async def on_member_join(member):
         fuente_nombre = ImageFont.truetype("font/EXEPixelPerfect.ttf", size=80)
         fuente_bienvenida = ImageFont.truetype("font/EXEPixelPerfect.ttf", size=100)
     except OSError:
-        fuente_nombre = ImageFont.load_default(size=50)
-        fuente_bienvenida = ImageFont.load_default(size=70)
+        fuente_nombre = ImageFont.load_default(size=80)
+        fuente_bienvenida = ImageFont.load_default(size=95)
     texto_nombre = f"{member.name}".upper()
     texto_bienvenida = "¡Bienvenid@!"
     # calcular el ancho del texto para centrarlo
