@@ -72,7 +72,7 @@ async def on_member_join(member):
     width_servidor = bbox_servidor[2] - bbox_servidor[0]
     heigth_servidor = bbox_servidor[3] - bbox_servidor[1]
     text_x_servidor = fondo.width // 2
-    text_y_servidor = avatar_y - heigth_servidor - 40 # 30px arriba del avatar
+    text_y_servidor = avatar_y - heigth_servidor - 60 # 30px arriba del avatar
     
     # sombra
     sombra_offset = 3
