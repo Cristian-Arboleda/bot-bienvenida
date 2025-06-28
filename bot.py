@@ -75,7 +75,7 @@ async def on_member_join(member):
     text_y_servidor = avatar_y - heigth_servidor - 60 # 60px arriba del avatar
     
     # sombra
-    sombra_offset = 3
+    sombra_offset = 5
     draw.text(
         (text_x_servidor - width_servidor // 2 + sombra_offset, text_y_servidor + sombra_offset),
         nombre_servidor, font=fuente_servidor, fill=(0, 0, 0, 255)
@@ -116,7 +116,7 @@ async def on_member_join(member):
     
     # Dibuja los textos centrados
     # Dibuja sombra negra
-    sombra_offset = 3 # pixeles de desplazamiento para la sombra 
+    sombra_offset = 5 # pixeles de desplazamiento para la sombra 
     # Bienvenida
     draw.text(
         (text_x - width_bienvenida // 2 + sombra_offset, text_y_bienvenida + sombra_offset), 
