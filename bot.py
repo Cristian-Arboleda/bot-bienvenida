@@ -64,6 +64,28 @@ async def on_member_join(member):
         width=borde_grosor
     )
     
+    # Agregrar el nombre del servidor encima del avatar
+    nombre_servidor = member.guild.name.upper()
+    fuente_servidor = ImageFont.truetype("font/EXEpixelPerfect.ttf", size = 140)
+    
+    bbox_servidor = draw.textbbox((0, 0), nombre_servidor, font=fuente_servidor)
+    width_servidor = bbox_servidor[2] - bbox_servidor[0]
+    heigth_servidor = bbox_servidor[3] - bbox_servidor[1]
+    text_x_servidor = fondo.width // 2
+    text_y_servidor = avatar_y - heigth_servidor - 30 # 30px arriba del avatar
+    
+    # sombra
+    sombra_offset = 3
+    draw.text(
+        (text_x_servidor - width_servidor // 2 + sombra_offset, text_y_servidor + sombra_offset),
+        nombre_servidor, font=fuente_servidor, fill=(0, 0, 0, 255)
+    )
+    # texto principal
+    draw.text(
+        (text_x_servidor- width_bienvenida // 2, text_y_servidor),
+        nombre_servidor, font=fuente_bienvenida
+    )
+    
     # D) Pega el avatar sobre el fondo
     pos_avatar = (avatar_x, avatar_y)
     fondo.paste(avatar, pos_avatar, avatar)
