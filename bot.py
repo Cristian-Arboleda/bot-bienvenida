@@ -82,8 +82,8 @@ async def on_member_join(member):
     )
     # texto principal
     draw.text(
-        (text_x_servidor- width_bienvenida // 2, text_y_servidor),
-        nombre_servidor, font=fuente_bienvenida
+        (text_x_servidor- width_servidor // 2, text_y_servidor),
+        nombre_servidor, font=fuente_servidor, fill=(255, 182, 193, 255) # rosado
     )
     
     # D) Pega el avatar sobre el fondo
