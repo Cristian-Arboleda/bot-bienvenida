@@ -66,7 +66,7 @@ async def on_member_join(member):
     
     # Agregrar el nombre del servidor encima del avatar
     nombre_servidor = member.guild.name.upper()
-    fuente_servidor = ImageFont.truetype("font/EXEpixelPerfect.ttf", size = 140)
+    fuente_servidor = ImageFont.truetype("font/EXEPixelPerfect.ttf", size = 140)
     
     bbox_servidor = draw.textbbox((0, 0), nombre_servidor, font=fuente_servidor)
     width_servidor = bbox_servidor[2] - bbox_servidor[0]
