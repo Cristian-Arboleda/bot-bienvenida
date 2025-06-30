@@ -145,7 +145,7 @@ async def on_member_join(member):
             output.seek(0)
             await canal.send(
                 content=f"""
-🎉 !Bienvenid@ {member.mention} a **{member.guild.name}**
+🎉 !Bienvenid@ {member.mention} a **{member.guild.name}**!
 Tu participación es muy importante para mantener viva y activa esta comunidad. 
 ¡Estamos felices de tenerte con nosotros!
                 """,
