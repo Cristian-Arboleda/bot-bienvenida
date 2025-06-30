@@ -92,7 +92,7 @@ async def on_member_join(member):
     
     draw = ImageDraw.Draw(fondo)
     # E) Escribe el nombre del usuario
-    # carga una fuente TTF, pon en tu carpeta o usa una del sistema
+    # carga fuente TTF
     try:
         fuente_nombre = ImageFont.truetype("font/EXEPixelPerfect.ttf", size=80)
         fuente_bienvenida = ImageFont.truetype("font/EXEPixelPerfect.ttf", size=100)
@@ -144,7 +144,13 @@ async def on_member_join(member):
             fondo.convert("RGB").save(output, format="JPEG")
             output.seek(0)
             await canal.send(
-                content=f"🎉 !Bienvenid@ {member.mention} a **{member.guild.name}**!",
+                content=f"""
+                🎉 !Bienvenid@ {member.mention} a **{member.guild.name}**
+                Nos alegra tenerte aquí. Este servidor fue creado como un espacio seguro y divertido donde puedas compartir y disfrutar de lo que te apasiona.
+                No dudes en expresarte libremente, hacer preguntas o pedir ayuda cuando lo necesites.
+                Tu participación es muy importante para mantener viva y activa esta comunidad. 
+                ¡Estamos felices de tenerte con nosotros!
+                """,
                 file=discord.File(fp=output, filename="welcome.jpg")
             )
 
