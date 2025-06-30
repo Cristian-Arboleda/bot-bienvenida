@@ -145,11 +145,9 @@ async def on_member_join(member):
             output.seek(0)
             await canal.send(
                 content=f"""
-                🎉 !Bienvenid@ {member.mention} a **{member.guild.name}**
-                Nos alegra tenerte aquí. Este servidor fue creado como un espacio seguro y divertido donde puedas compartir y disfrutar de lo que te apasiona.
-                No dudes en expresarte libremente, hacer preguntas o pedir ayuda cuando lo necesites.
-                Tu participación es muy importante para mantener viva y activa esta comunidad. 
-                ¡Estamos felices de tenerte con nosotros!
+🎉 !Bienvenid@ {member.mention} a **{member.guild.name}**
+Tu participación es muy importante para mantener viva y activa esta comunidad. 
+¡Estamos felices de tenerte con nosotros!
                 """,
                 file=discord.File(fp=output, filename="welcome.jpg")
             )
