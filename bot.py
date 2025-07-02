@@ -8,6 +8,7 @@ import os
 import webserver
 
 DISCORD_TOKEN = os.getenv("DISCORD_TOKEN")
+canal_de_bienvenida = '👋·【-bienvenida-】'
 
 # 1. Intents: Necesario para obtener nuevos miembros
 intents = discord.Intents.default()
@@ -138,7 +139,7 @@ async def on_member_join(member):
     )
     
     # F) envia la imagen al canal de bienvenida
-    canal = discord.utils.get(member.guild.text_channels, name="bienvenida👋")
+    canal = discord.utils.get(member.guild.text_channels, name=canal_de_bienvenida)
     if canal:
         with io.BytesIO() as output:
             fondo.convert("RGB").save(output, format="JPEG")
